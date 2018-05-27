@@ -4,14 +4,18 @@
     font-weight: bold;
 }
 
+$blue: #2964b1ce;
+$yellow-main: rgb(207, 231, 25);
+$yellow-second: rgb(91, 109, 51);
+
 html {
-    background: #2964b1ce;
+    background: $blue;
     padding: 20px;
 }
 
 .item {
-    border: 1px solid rgb(91, 109, 51);
-    background: rgb(207, 231, 25);
+    border: 1px solid $yellow-second;
+    background: $yellow-main;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -19,8 +23,8 @@ html {
 
 .container {
     display: grid;
-    grid-template-columns: 200px 400px;
-    grid-template-rows: 50px 30px;
     grid-gap: 20px;
-    grid-auto-rows: 20px 100px 30px;
+    grid-template-columns: 400px 200px;
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
 }
