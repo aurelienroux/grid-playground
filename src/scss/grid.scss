@@ -1,4 +1,23 @@
 * {
-    color: orange;
-    font-size: 100px;
+    box-sizing: border-box;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+}
+
+html {
+    background: #2964b1ce;
+    padding: 20px;
+}
+
+.item {
+    border: 1px solid rgb(91, 109, 51);
+    text-align: center;
+    padding: 10px;
+    background: rgb(207, 231, 25);
+}
+
+.container {
+    display: grid;
+    grid-template-columns: 200px 500px;
+    grid-template-rows: 200px 100px 400px;
+    grid-gap: 20px;
 }
