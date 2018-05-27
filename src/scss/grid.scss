@@ -7,10 +7,17 @@
 $blue: rgb(50, 108, 184);
 $yellow-main: rgb(207, 231, 25);
 $yellow-second: rgb(139, 173, 65);
-
 html {
     background: $blue;
     padding: 20px;
+}
+
+h1 {
+    color: $yellow-main;
+    text-align: center;
+    border: 2px solid $yellow-main;
+    width: auto;
+    padding: 5px;
 }
 
 .item {
@@ -25,11 +32,42 @@ html {
 .container {
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(5, 1fr);
+    grid-template-columns: repeat(5, 1fr 2fr);
+    grid-template-rows: repeat(10, 50px);
 }
 
-.item9 {
+.item1 {
     background: salmon;
+    grid-column: 3 / 5;
+}
+
+.item2 {
+    background: azure;
+    grid-column: 5 / -1;
+}
+
+.item5 {
+    background: saddlebrown;
     grid-column: span 2;
-    grid-row: span 4;
+    grid-row: span 2;
+}
+
+.item8 {
+    background: seagreen;
+    grid-row: span 2;
+}
+
+.item15 {
+    background: crimson;
+    grid-column: 1 / -1;
+}
+
+.item18 {
+    background: magenta;
+    grid-column: span 4 / 9;
+}
+
+.item20 {
+    background: slategrey;
+    grid-row: 4 / span 3;
 }
