@@ -33,6 +33,6 @@ h1 {
     border: 5px solid $yellow-second;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(auto-fill, 123px);
+    grid-template-columns: repeat(auto-fit, minmax(70px, 1fr));
     // grid-template-rows: repeat(10, 50px);
 }
