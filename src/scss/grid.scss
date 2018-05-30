@@ -28,10 +28,13 @@ h1 {
     border: 5px solid $yellow-second;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: repeat(10, 1fr);
-    grid-template-rows: repeat(5, 100px);
+    height: 400px;
+    grid-template-columns: repeat(5, 100px);
+    // grid-template-rows: repeat(5, 30px);
     // justify-items: center;
     // align-items: center;
-    place-items: center flex-start;
+    // place-items: center flex-start;
+    justify-content: space-between;
+    align-content: center;
 }
 
