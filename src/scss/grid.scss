@@ -29,12 +29,15 @@ h1 {
     display: grid;
     grid-gap: 20px;
     height: 400px;
-    grid-template-columns: repeat(5, 100px);
+    grid-template-columns: repeat(5, 130px);
     // grid-template-rows: repeat(5, 30px);
     // justify-items: center;
     // align-items: center;
     // place-items: center flex-start;
     justify-content: space-between;
-    align-content: center;
+    align-content: space-between;
 }
 
+.item5 {
+    justify-self: flex-end;
+}
