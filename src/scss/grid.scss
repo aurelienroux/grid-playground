@@ -33,14 +33,11 @@ h1 {
     border: 5px solid $yellow-second;
     display: grid;
     grid-gap: 20px;
-    grid-template-areas:
-        "one one one one two two two"
-        "one one one one two two two"
-        "one one one one two two two"
-        "one one one one two two two"
+    grid-template-columns: [site-left] 1fr [content-start] 5fr [content-end] 1fr [site-right];
+    grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
 }
 
-.item4 {
-    grid-column: one-start / one-end;
+.item3 {
+    grid-column: content-start / content-end;
+    grid-row: content-top / content-bottom;
 }
-
