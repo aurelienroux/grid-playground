@@ -30,14 +30,20 @@ h1 {
 }
 
 .container {
-    border: 5px solid $yellow-second;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: [site-left] 1fr [content-start] 5fr [content-end] 1fr [site-right];
-    grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
+    grid-template-columns: repeat(10, 1fr);
 }
 
-.item3 {
-    grid-column: content-start / content-end;
-    grid-row: content-top / content-bottom;
+.logo {
+    grid-column: span 2;
+    order: 2;
+}
+.nav {
+    grid-column: span 8;
+    order: 1;
+}
+.content {
+    grid-column: 1 / -1;
+    order: 3;
 }
