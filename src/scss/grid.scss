@@ -21,23 +21,17 @@ h1 {
 }
 
 .item {
-    border: 1px solid $yellow-second;
     background: $yellow-main;
-    display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
 }
 
 .container {
     border: 5px solid $yellow-second;
     display: grid;
     grid-gap: 20px;
-    grid-template-columns: [site-left] 1fr [content-start] 5fr [content-end] 1fr [site-right];
-    grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
+    grid-template-columns: repeat(10, 1fr);
+    grid-template-rows: repeat(5, 100px);
+    // justify-items: center;
+    // align-items: center;
+    place-items: center flex-start;
 }
 
-.item3 {
-    grid-column: content-start / content-end;
-    grid-row: content-top / content-bottom;
-}
