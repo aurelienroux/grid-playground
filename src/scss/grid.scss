@@ -10,6 +10,7 @@ $yellow-second: rgb(139, 173, 65);
 html {
     background: $blue;
     padding: 20px;
+    font-family: sans-serif
 }
 
 h1 {
@@ -33,4 +34,11 @@ h1 {
     display: grid;
     grid-template-columns: 150px 1fr;
     grid-gap: 10px;
+    align-items: center;
+    color: white;
+    font-weight: 100;
+
+    img {
+        width: 100%;
+    }
 }
