@@ -36,6 +36,42 @@ p {
 
 .item {
     overflow: hidden;
+    display: grid;
+    grid-template-columns: 1;
+    grid-template-rows: 1;
+}
+
+.item img {
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+}
+
+.item__overlay {
+    background: #ffc60032;
+    grid-column: 1 / -1;
+    grid-row: 1 / -1;
+    display: grid;
+    justify-items: center;
+    align-items: center;
+    position: relative;
+    transform: translateY(100%);
+    transition: 0.2s;
+}
+
+.item:hover .item__overlay {
+    transform: translateY(0%);
+}
+
+.item__overlay button {
+    background: none;
+    border: 2px solid white;
+    color: white;
+    padding: 5px;
+    text-transform: uppercase;
+    background: #00000030;
 }
 
 .item.v2 {
