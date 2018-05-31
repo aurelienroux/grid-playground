@@ -45,7 +45,10 @@
     }
 
     const digits = Array.from({ length: 50 }, () =>
-    [randomNumbers(4), randomNumbers(4)]);
+    [randomNumbers(4), randomNumbers(4)]).concat([ [1, 1], [1, 1], [1, 1],
+    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
+    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
+    [1, 1], [1, 1], [1, 1],[1, 1] ])
 
     const html = digits.map(generateHtml).join('');
     console.log(html);
