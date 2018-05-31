@@ -1,43 +1,55 @@
 * {
     box-sizing: border-box;
-    font-family: 'Avenir Next', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
-    font-weight: bold;
 }
 
-$blue: rgb(50, 108, 184);
-$yellow-main: rgb(207, 231, 25);
-$yellow-second: rgb(139, 173, 65);
-html {
-    background: $blue;
+body {
+    padding: 50px;
+    font-family: sans-serif;
+    background: linear-gradient(to right, #F93D66, #6D47D9);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin: 0 0 5px 0;
+}
+
+p {
+    margin: 0 0 20px 0;
+}
+
+.close {
+    background: none;
+    color: white;
+    border: 0;
+}
+
+.gallery {}
+
+.overlay {
+    position: fixed;
+    background: rgba(0, 0, 0, 0.7);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: none;
+    z-index: 2;
+}
+
+.overlay.open {
+    display: grid;
+}
+
+.overlay figure {
+    background: white;
+    width: 700px;
     padding: 20px;
 }
 
-h1 {
-    color: $yellow-main;
-    text-align: center;
-    border: 2px solid $yellow-main;
-    width: auto;
-    padding: 5px;
-}
-
-.item {
-    border: 1px solid $yellow-second;
-    background: $yellow-main;
-    display: flex;
-    padding: 5px;
-    justify-content: center;
-    align-items: center;
-}
-
-.container {
-    border: 5px solid $yellow-second;
-    display: grid;
-    grid-gap: 20px;
-    grid-template-columns: [site-left] 1fr [content-start] 5fr [content-end] 1fr [site-right];
-    grid-template-rows: [content-top] repeat(10, auto) [content-bottom];
-}
-
-.item3 {
-    grid-column: content-start / content-end;
-    grid-row: content-top / content-bottom;
+.overlay img {
+    width: 100%;
 }
