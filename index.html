@@ -10,17 +10,14 @@
 </head>
 
 <body>
-
     <div class="overlay">
         <div class="overlay-inner">
             <button class="close">× Close</button>
             <img>
         </div>
     </div>
-
     <section class="gallery">
     </section>
-
 </body>
 
 <script>
@@ -39,22 +36,34 @@
             </div>
         `;
     }
-
     function randomNumbers(limit) {
-        return Math.floor(Math.random() * limit ) + 1;
+        return Math.floor(Math.random() * limit) + 1;
+    }
+    function handleClick(e) {
+        const src = e.currentTarget.querySelector('img').src;
+        overlayImage.src = src;
+        overlay.classList.add('open');
+    }
+    function close() {
+        overlay.classList.remove('open');
     }
 
-    const digits = Array.from({ length: 50 }, () =>
-    [randomNumbers(4), randomNumbers(4)]).concat([ [1, 1], [1, 1], [1, 1],
-    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
-    [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1], [1, 1],
-    [1, 1], [1, 1], [1, 1],[1, 1] ])
+    const digits = Array.from({
+        length: 50
+    }, () => [randomNumbers(4), randomNumbers(4)]).concat([
+        [1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],
+        [1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],
+        [1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],[1, 1],
+        [1, 1]
+    ])
 
     const html = digits.map(generateHtml).join('');
-    console.log(html);
-
     gallery.innerHTML = html;
 
+    const items = document.querySelectorAll('.item');
+    items.forEach(item => item.addEventListener('click', handleClick));
+
+    overlayClose.addEventListener('click', close)
 </script>
 
 </html>
