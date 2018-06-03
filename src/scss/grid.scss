@@ -1,3 +1,4 @@
+$grey: #343436;
 html {
     box-sizing: border-box;
     font-family: "Lato", "Lucida Grande", "Lucida Sans Unicode", Tahoma, Sans-Serif;
@@ -31,14 +32,13 @@ h6 {
     display: grid;
     height: 100vh;
     grid-template-rows: auto 1fr 1fr auto;
-}
-.codepen > * {
-    border: 1px solid lime;
+    color: white;
 }
 
 .code {
     display: grid;
     grid-template-columns: repeat(3, 1fr);
+    background: #1b2b34;
 }
 
 .pen {
@@ -47,4 +47,70 @@ h6 {
     grid-auto-flow: column;
     align-items: center;
     grid-gap: 10px;
+    background: black;
+    border-bottom: 5px solid $grey;
+    color: white;
+    padding: 10px;
+}
+
+.preview {
+    display: grid;
+}
+
+.button {
+    background: $grey;
+    color: white;
+    border: 3px solid $grey;
+    border-radius: 2px;
+    padding: 10px;
+    font-size: 15px;
+
+    &--small {
+        font-size: 12px;
+        padding: 4px;
+    }
+
+    &--dirty {
+        border-top: 2px solid #ffc600;
+    }
+}
+
+.editor {
+    border-left: 20px solid $grey;
+    border-bottom: 20px solid $grey;
+    display: grid;
+    grid-template-rows: auto 1fr;
+
+    &__header {
+        display: grid;
+        grid-template-columns: auto 1fr auto;
+        grid-gap: 5px;
+        align-items: center;
+        padding: 5px;
+        background: rgba(0, 0, 0, 0.1);
+    }
+    &__code {
+        display: grid;
+        grid-template-columns: auto 1fr;
+    }
+    &__gutter {
+        display: grid;
+        grid-auto-rows: min-content;
+        padding: 0 5px;
+    }
+
+    &__input {
+        resize: none;
+        background: none;
+        border: 0;
+        color: grey;
+        font-size: 16px;
+        line-height: 19px;
+    }
+}
+
+.settings {
+    padding: 5px;
+    background: black;
+    border-top: 1px solid grey;
 }
