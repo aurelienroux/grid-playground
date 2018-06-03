@@ -31,7 +31,7 @@ img {
     min-height: 400px;
     background-image: url('https://images.unsplash.com/photo-1524412529635-a258ed66c010?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=916728c49c3739ec0e9c4e063b9a2c9e&auto=format&fit=crop&w=1285&q=80');
     background-size: cover;
-    background-position: bottom right;
+    background-position: center center;
     padding: 50px;
     display: flex;
     flex-direction: column;
@@ -46,6 +46,7 @@ img {
 
 .cta {
     background: #ffc600;
+    padding: 20px 0;
     display: grid;
     align-items: center;
     justify-items: center;
@@ -75,7 +76,7 @@ img {
     grid-gap: 10px;
     margin: 20px 0;
     list-style-type: none;
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     a {
         background: #ffc600;
         text-decoration: none;
@@ -99,6 +100,7 @@ img {
 }
 
 .feature {
+    text-align: center;
     background: wheat;
     padding: 10px;
     border: 1px solid white;
@@ -113,7 +115,7 @@ img {
 
 // About section
 .about {
-    background: white;
+    background: wheat;
     padding: 50px;
     display: grid;
     grid-template-columns: 400px 1fr;
@@ -155,3 +157,48 @@ img {
     background: linear-gradient(to left, transparent, yellow);
 }
 
+@media (max-width: 1000px) {
+    .menu {
+        order: -1;
+        perspective: 800px;
+    }
+    [aria-controls='menu-list'] {
+        display: block;
+        margin-bottom: 10px;
+    }
+    .menu ul {
+        max-height: 0;
+        overflow: hidden;
+        transform: rotateX(90deg);
+        transition: all 0.5s;
+    }
+    [aria-expanded="true"]~ul {
+        display: grid;
+        max-height: 500px;
+        transform: rotateX(0);
+    }
+    [aria-expanded="false"] .close {
+        display: none;
+    }
+    [aria-expanded="true"] .close {
+        display: inline-block;
+    }
+    [aria-expanded="true"] .open {
+        display: none;
+    }
+}
+
+@media (max-width: 700px) {
+    .top {
+        grid-template-areas: "hero hero" "cta1 cta2"
+    } // about
+    .about {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .top {
+        grid-template-areas: "hero" "cta1" "cta2"
+    }
+}
