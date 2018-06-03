@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,39 +9,103 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./dist/css/main.css" />
     <!-- <script src="main.js"></script> -->
 </head>
+
 <body>
-    <h1>CSS grid playground</h1>
-    <div class="container">
-        <div class="item item1">1</div>
-        <div class="item item2">2</div>
-        <div class="item item3">3</div>
-        <div class="item item4">4</div>
-        <div class="item item5">5</div>
-        <div class="item item6">6</div>
-        <div class="item item7">7</div>
-        <div class="item item8">8</div>
-        <div class="item item9">9</div>
-        <div class="item item10">10</div>
-        <div class="item item11">11</div>
-        <div class="item item12">12</div>
-        <div class="item item13">13</div>
-        <div class="item item14">14</div>
-        <div class="item item15">15</div>
-        <div class="item item16">16</div>
-        <div class="item item17">17</div>
-        <div class="item item18">18</div>
-        <div class="item item19">19</div>
-        <div class="item item20">20</div>
-        <div class="item item21">21</div>
-        <div class="item item22">22</div>
-        <div class="item item23">23</div>
-        <div class="item item24">24</div>
-        <div class="item item25">25</div>
-        <div class="item item26">26</div>
-        <div class="item item27">27</div>
-        <div class="item item28">28</div>
-        <div class="item item29">29</div>
-        <div class="item item30">30</div>
+
+
+    <div class="wrapper">
+        <div class="top">
+            <header class="hero">
+                <h1>Terry's Taco Joint</h1>
+                <p>Pretty Good Tacos!</p>
+            </header>
+            <div class="cta cta1">
+                <p class="price">$1.99</p>
+                <p>Tacos</p>
+            </div>
+            <div class="cta cta2">
+                <p class="price">$3.99</p>
+                <p>Kombucha</p>
+            </div>
+
+        </div>
+        <nav class="menu">
+            <button aria-expanded="false" aria-controls="menu-list">
+                <span class="open">☰</span>
+                <span class="close">×</span>
+                Menu
+            </button>
+            <ul id="menu-list">
+                <li>
+                    <a href="">Tacos</a>
+                </li>
+                <li>
+                    <a href="">Beers</a>
+                </li>
+                <li>
+                    <a href="">Wines</a>
+                </li>
+                <li>
+                    <a href="">Desserts</a>
+                </li>
+                <li>
+                    <a href="">Reservations</a>
+                </li>
+            </ul>
+        </nav>
+
+        <section class="features">
+            <div class="feature">
+                <span class="icon">🌮</span>
+                <h3>Tacos</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🍺</span>
+                <h3>Beer</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🍷</span>
+                <h3>Wine</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+            <div class="feature">
+                <span class="icon">🎵</span>
+                <h3>Music</h3>
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, assumenda.</p>
+            </div>
+        </section>
+
+        <section class="about">
+            <img src="https://images.unsplash.com/photo-1512838154171-97c4fa39f33b?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=ff36387349c8822f2abd069dff9d8f05&auto=format&fit=crop&w=1350&q=80" alt="Yummy Taco" class="about__mockup">
+            <div class="about__details">
+                <h2>Featured Taco</h2>
+                <p>Slim Profile, easy to hold and loaded with cheese.</p>
+                <p>This is the one you have been waiting for</p>
+                <button>Learn More →</button>
+            </div>
+        </section>
+
+
+        <section class="gallery">
+            <h2>Instant Grams</h2>
+            <img src="https://source.unsplash.com/random/201x201" alt="">
+            <img src="https://source.unsplash.com/random/202x202" alt="">
+            <img src="https://source.unsplash.com/random/203x203" alt="">
+            <img src="https://source.unsplash.com/random/204x204" alt="">
+            <img src="https://source.unsplash.com/random/205x205" alt="">
+            <img src="https://source.unsplash.com/random/206x206" alt="">
+            <img src="https://source.unsplash.com/random/207x207" alt="">
+            <img src="https://source.unsplash.com/random/207x208" alt="">
+            <img src="https://source.unsplash.com/random/207x209" alt="">
+            <img src="https://source.unsplash.com/random/207x210" alt="">
+        </section>
     </div>
+
+    <script>
+    </script>
+
 </body>
+
 </html>
