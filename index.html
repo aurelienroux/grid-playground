@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html>
+
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -8,39 +9,79 @@
     <link rel="stylesheet" type="text/css" media="screen" href="./dist/css/main.css" />
     <!-- <script src="main.js"></script> -->
 </head>
+
 <body>
-    <h1>CSS grid playground</h1>
-    <div class="container">
-        <div class="item item1">1</div>
-        <div class="item item2">2</div>
-        <div class="item item3">3</div>
-        <div class="item item4">4</div>
-        <div class="item item5">5</div>
-        <div class="item item6">6</div>
-        <div class="item item7">7</div>
-        <div class="item item8">8</div>
-        <div class="item item9">9</div>
-        <div class="item item10">10</div>
-        <div class="item item11">11</div>
-        <div class="item item12">12</div>
-        <div class="item item13">13</div>
-        <div class="item item14">14</div>
-        <div class="item item15">15</div>
-        <div class="item item16">16</div>
-        <div class="item item17">17</div>
-        <div class="item item18">18</div>
-        <div class="item item19">19</div>
-        <div class="item item20">20</div>
-        <div class="item item21">21</div>
-        <div class="item item22">22</div>
-        <div class="item item23">23</div>
-        <div class="item item24">24</div>
-        <div class="item item25">25</div>
-        <div class="item item26">26</div>
-        <div class="item item27">27</div>
-        <div class="item item28">28</div>
-        <div class="item item29">29</div>
-        <div class="item item30">30</div>
+    <div class="codepen">
+        <header class="pen">
+            <div class="pen__details">
+                <h1>Some Amazing Pen Name</h1>
+                <p class="pen__author">A Pen by Wes Bos</p>
+            </div>
+            <button class="button button--dirty">☁️ Save</button>
+            <button class="button">️️☁️ Save As Private</button>
+            <button class="button">⚙ Settings</button>
+            <button class="button">👀 Change View</button>
+            <img src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/28831/profile/profile-80.jpg?1" alt="Wes Bos" height="44">
+        </header>
+        <section class="code">
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings">⚙</button>
+                    <h3 class="editor__heading">HTML</h3>
+                    <button class="button button--small editor__settings">⌄</button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter">
+                        <span class="editor__number">1</span>
+                    </div>
+
+                    <textarea class="editor__input">
+                        <p>Oh Hey There!</p>
+                    </textarea>
+                </div>
+            </div>
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings">⚙</button>
+                    <h3 class="editor__heading">CSS</h3>
+                    <button class="button button--small editor__settings">⌄</button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter">
+                        <span class="editor__number">1</span>
+                        <span class="editor__number">2</span>
+                        <span class="editor__number">3</span>
+                    </div>
+
+                    <textarea class="editor__input">.codepen { is: cool; }
+                    </textarea>
+                </div>
+
+            </div>
+            <div class="editor">
+                <header class="editor__header">
+                    <button class="button button--small editor__settings">⚙</button>
+                    <h3 class="editor__heading">JS</h3>
+                    <button class="button button--small editor__settings">⌄</button>
+                </header>
+                <div class="editor__code">
+                    <div class="editor__gutter">
+                        <span class="editor__number">1</span>
+                    </div>
+                    <textarea class="editor__input">const wes = 'coolest';</textarea>
+                </div>
+
+            </div>
+        </section>
+        <section class="preview">
+            <iframe src="https://css-tricks.com" frameborder="0"></iframe>
+        </section>
+        <footer class="settings">
+            <button class="button button--small button--black">Console</button>
+            <button class="button button--small button--black">Assets</button>
+            <button class="button button--small button--black">⌘</button>
+        </footer>
     </div>
 </body>
+
 </html>
